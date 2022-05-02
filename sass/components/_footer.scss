@@ -1,0 +1,155 @@
+.footer {
+  background-color: $footer-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo--inverse {
+  color: $primary-white-color;
+}
+
+.box {
+  @include centeredFlex(flex, baseline, none);
+}
+.box__address {
+  margin-right: 70px;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer__list {
+  margin-top: 20px;
+  font-style: normal;
+}
+
+.footer__address {
+  transition: color $timing-function;
+
+  color: $primary-white-color;
+  line-height: 1.71;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.footer__mail {
+  transition: color $timing-function;
+
+  color: $address-grey-color;
+  line-height: 1.71;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer__phone {
+  transition: color $timing-function;
+
+  color: $address-grey-color;
+  line-height: 1.71;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.join-us__title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+.join-us__socials {
+  display: flex;
+  margin-top: 20px;
+}
+.join-us__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-us__link {
+  transition: background-color $timing-function;
+
+  @include centeredFlex();
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $footer-link-bg-color;
+  color: $primary-white-color;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.join-us__icon {
+  fill: currentColor;
+}
+
+.form-footer {
+  @include centeredFlex(flex, flex-end, none);
+  margin-left: auto;
+}
+
+.form-footer__field {
+  display: flex;
+  flex-direction: column;
+}
+.form-footer__label {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  margin-bottom: 20px;
+}
+
+.form-footer__mail {
+  outline: none;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-btn__sign-up {
+  @include centeredFlex(flex, center, none);
+
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+
+  &::after {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M24 0 0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0Z' fill='%23fff'/%3e%3c/svg%3e");
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+}

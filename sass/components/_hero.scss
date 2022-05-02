@@ -1,0 +1,27 @@
+.hero {
+  background-color: $footer-background-color;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero__title {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 696px;
+  color: $primary-white-color;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero__button {
+  @extend %btn;
+  transition: background-color $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
