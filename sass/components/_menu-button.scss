@@ -1,0 +1,28 @@
+.menu-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-button__svg {
+  padding: 11px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    fill: $accent-color;
+  }
+}
+
+.menu-button__close {
+  display: none;
+}
+
+.menu-button.is-open .menu-button__close {
+  display: block;
+}
+
+.menu-button.is-open .menu-button__menu {
+  display: none;
+}
