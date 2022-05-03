@@ -1,18 +1,22 @@
 .clients {
-  @include centeredFlex();
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+  // @include centeredFlex();
 }
 
 .clients__item {
   cursor: pointer;
-  width: 170px;
-  height: 92px;
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 .clients__link {
   transition: color $timing-function, border-color $timing-function;
 
   @include centeredFlex(inline-flex);
 
-  width: 170px;
+  width: 210px;
   height: 92px;
   color: $clients-link_color;
   border: 1px solid $clients-link_color;
@@ -29,6 +33,6 @@
   fill: currentColor;
 }
 
-.clients__item:not(:last-child) {
-  margin-right: 30px;
-}
+// .clients__item:not(:last-child) {
+//   margin-right: 30px;
+// }

@@ -32,10 +32,10 @@ img {
   height: auto;
 }
 
-// .section {
-//   padding-top: 94px;
-//   padding-bottom: 94px;
-// }
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 // .title {
 //   margin-bottom: 50px;
 //   font-size: 36px;
@@ -43,3 +43,10 @@ img {
 //   text-align: center;
 //   letter-spacing: 0.03em;
 // }
+.title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}

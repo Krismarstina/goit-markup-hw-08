@@ -1,0 +1,39 @@
+.auth-list {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: auto;
+  }
+}
+.auth-list__link {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    transition: color $timing-function;
+
+    color: $secondary-text-color;
+    @include centeredFlex(flex, center, null);
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+.auth-list__item + .auth-list__item {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    margin-left: 50px;
+  }
+}
+
+.auth-list__icon {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}

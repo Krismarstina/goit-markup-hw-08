@@ -1,1 +1,8 @@
-
+.page-header {
+  border-bottom: 1px solid $page-header-border;
+}
+.page-header__header {
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex(flex, center, none);
+  }
+}
