@@ -24,56 +24,71 @@
     <!--шапка-->
     <header class="page-header">
       <div class="container page-header__header">
-        <nav class="nav">
-          <a href="" class="logo"><span class="logo--color">Web</span>Studio</a>
-          <button type="button" class="menu-button is-open">
-            <svg
-              width="40"
-              height="40"
-              class="menu-button__svg"
-              aria-label="переключатель мобильного меню"
-            >
-              <use
-                class="menu-button__close"
-                href="./images/icons.svg#close-header"
-              ></use>
-              <use
-                class="menu-button__menu"
-                href="./images/icons.svg#menu-header"
-              ></use>
-            </svg>
-          </button>
+        <a href="" class="logo"><span class="logo--color">Web</span>Studio</a>
+        <button type="button" class="menu-button is-open">
+          <svg
+            width="40"
+            height="40"
+            class="menu-button__svg"
+            aria-label="переключатель мобильного меню"
+          >
+            <use
+              class="menu-button__menu"
+              href="./images/icons.svg#menu-header"
+            ></use>
+            <use
+              class="menu-button__close"
+              href="./images/icons.svg#close-header"
+            ></use>
+          </svg>
+        </button>
 
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="" class="nav__link nav__link--current">Студия</a>
+        <div data-menu class="menu-container">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="" class="nav__link nav__link--current">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="auth-list">
+            <li class="auth-list__item auth-list__list--bottom">
+              <a
+                href="tel:+380961111111"
+                class="auth-list__link auth-list__phone"
+              >
+                <svg class="auth-list__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">Контакты</a>
+            <li class="auth-list__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="auth-list__link auth-list__mail"
+              >
+                <svg class="auth-list__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="auth-list">
-          <li class="auth-list__item">
-            <a href="mailto:info@devstudio.com" class="auth-list__link">
-              <svg class="auth-list__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="auth-list__item">
-            <a href="tel:+380961111111" class="auth-list__link">
-              <svg class="auth-list__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+
+          <ul class="menu-socials">
+            <li class="menu-socials__item">Instagram</li>
+            <li class="menu-socials__item">Twitter</li>
+            <li class="menu-socials__item">Facebook</li>
+            <li class="menu-socials__item">LinkedIn</li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -97,13 +112,13 @@
               </p>
               <form name="form">
                 <div class="form__field">
-                  <label for="username" class="form__label">Имя </label>
                   <input
                     type="text"
                     id="username"
                     name="username"
                     class="form__input"
                   />
+                  <label for="username" class="form__label">Имя</label>
                   <svg class="form__icons">
                     <use
                       href="./images/icons.svg#icon-person-form"
@@ -113,13 +128,13 @@
                   </svg>
                 </div>
                 <div class="form__field">
-                  <label for="tel" class="form__label">Телефон </label>
                   <input
                     type="tel"
                     id="tel"
                     name="phone-number"
                     class="form__input"
                   />
+                  <label for="tel" class="form__label">Телефон </label>
                   <svg class="form__icons">
                     <use
                       href="./images/icons.svg#icon-phone-form"
@@ -129,13 +144,13 @@
                   </svg>
                 </div>
                 <div class="form__field">
-                  <label for="mail" class="form__label">Почта </label>
                   <input
                     type="email"
                     id="mail"
                     name="email"
                     class="form__input"
                   />
+                  <label for="mail" class="form__label">Почта </label>
                   <svg class="form__icons">
                     <use
                       href="./images/icons.svg#icon-email-form"
@@ -459,35 +474,55 @@
             <li class="clients__item">
               <a class="clients__link" href="">
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="images/icons.svg#icon-Logo-client1"></use>
+                  <use
+                    href="images/icons.svg#icon-Logo-client1"
+                    width="106"
+                    height="60"
+                  ></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="">
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/icons.svg#icon-Logo-client2"></use>
+                  <use
+                    href="./images/icons.svg#icon-Logo-client2"
+                    width="106"
+                    height="60"
+                  ></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="">
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/icons.svg#icon-Logo-client3"></use>
+                  <use
+                    href="./images/icons.svg#icon-Logo-client3"
+                    width="106"
+                    height="60"
+                  ></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="">
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/icons.svg#icon-Logo-client4"></use>
+                  <use
+                    href="./images/icons.svg#icon-Logo-client4"
+                    width="106"
+                    height="60"
+                  ></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link" href="">
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/icons.svg#icon-Logo-client5"></use>
+                  <use
+                    href="./images/icons.svg#icon-Logo-client5"
+                    width="106"
+                    height="60"
+                  ></use>
                 </svg>
               </a>
             </li>
@@ -495,7 +530,11 @@
             <li class="clients__item">
               <a class="clients__link" href="">
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/icons.svg#icon-Logo-client6"></use>
+                  <use
+                    href="./images/icons.svg#icon-Logo-client6"
+                    width="106"
+                    height="60"
+                  ></use>
                 </svg>
               </a>
             </li>
@@ -588,6 +627,7 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
 
   @media screen and (min-width: $desktop) {
     display: flex;
@@ -13,7 +13,6 @@
 }
 
 .nav__list {
-  display: none;
   @media screen and (min-width: $desktop) {
     display: flex;
     margin-left: 95px;
@@ -21,17 +20,28 @@
   }
 }
 
-.nav__item + .nav__item {
-  display: none;
-
-  @media screen and (min-width: $desktop) {
-    margin-left: 50px;
-  }
+.nav__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
-.nav__link {
-  display: none;
+// .nav__item + .nav__item {
 
+//   @media screen and (min-width: $desktop) {
+//     margin-left: 50px;
+//   }
+// }
+
+.nav__link {
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
   @media screen and (min-width: $desktop) {
     transition: color $timing-function;
 
@@ -52,8 +62,7 @@
 }
 
 .nav__link--current {
-  display: none;
-
+  color: $accent-color;
   @media screen and (min-width: $desktop) {
     position: relative;
     color: $accent-color;

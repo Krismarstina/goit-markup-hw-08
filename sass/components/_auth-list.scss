@@ -1,12 +1,30 @@
 .auth-list {
-  display: none;
+  margin-top: 302px;
   @media screen and (min-width: $desktop) {
     display: flex;
     margin-left: auto;
   }
 }
+.auth-list__list--bottom {
+  margin-bottom: 32px;
+}
+
+.auth-list__phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+.auth-list__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+}
+
 .auth-list__link {
-  display: none;
   @media screen and (min-width: $desktop) {
     transition: color $timing-function;
 
@@ -24,7 +42,6 @@
   }
 }
 .auth-list__item + .auth-list__item {
-  display: none;
   @media screen and (min-width: $desktop) {
     margin-left: 50px;
   }

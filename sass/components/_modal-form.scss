@@ -12,7 +12,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
-
+  outline: none;
   margin: 0;
   padding: 12px 42px;
   font: inherit;
@@ -22,6 +22,15 @@
     border-radius: 4px;
     outline: none;
     cursor: pointer;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: -18px;
+
+  .form__input:focus + & {
+    color: $accent-color;
   }
 }
 
@@ -40,13 +49,13 @@
   transition: fill $timing-function;
 
   position: absolute;
-  top: 45%;
+  top: 20%;
   left: 12px;
 
   width: 18px;
   height: 18px;
 
-  .form__input:focus + & {
+  .form__input:focus ~ & {
     fill: $accent-color;
   }
 }
@@ -102,8 +111,8 @@
 
 .checkbox__label {
   @include centeredFlex(flex, center, none);
-
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   color: $secondary-text-color;
 }
 
