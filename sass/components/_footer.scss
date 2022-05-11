@@ -4,6 +4,14 @@
   padding-bottom: 60px;
 }
 
+.tablet-footer {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
 .logo--inverse {
   color: $primary-white-color;
 }
@@ -76,6 +84,10 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: $primary-white-color;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+  }
 }
 
 .join-us__socials {
@@ -115,10 +127,14 @@
   // margin-left: auto;
 }
 
-// .form-footer__field {
-//   // display: flex;
-//   // flex-direction: column;
-// }
+.form-footer__field {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .form-footer__label {
   font-weight: 700;
   line-height: 1.14;
@@ -144,6 +160,11 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+    margin-top: 0;
+  }
 }
 
 .footer-btn__sign-up {

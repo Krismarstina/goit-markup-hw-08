@@ -1,17 +1,27 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-bottom: -15px;
+  margin-left: -15px;
+  margin-top: -15px;
   // @include centeredFlex();
+  @media screen and (min-width: $tablet) {
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .clients__item {
   cursor: pointer;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
 
   width: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: calc(100% / 3 - 30px);
+  }
 }
 .clients__link {
   transition: color $timing-function, border-color $timing-function;

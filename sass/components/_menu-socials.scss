@@ -4,6 +4,10 @@
   align-items: center;
 
   margin-top: 64px;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .menu-socials__item {

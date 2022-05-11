@@ -28,9 +28,10 @@
 .form__label {
   position: absolute;
   top: -18px;
-
-  .form__input:focus + & {
-    color: $accent-color;
+  @media screen and (max-width: 767px) {
+    .form__input:focus + & {
+      color: $accent-color;
+    }
   }
 }
 

@@ -1,31 +1,50 @@
 .auth-list {
-  margin-top: 302px;
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    margin-left: auto;
+  @media screen and (max-width: 767px) {
+    margin-top: 302px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    margin-left: 84px;
+
+    align-content: center;
   }
 }
-.auth-list__list--bottom {
-  margin-bottom: 32px;
+
+.auth-list__item--bottom {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+}
+
+.auth-list__item--top {
+  @media screen and (min-width: $tablet) {
+    margin-top: 10px;
+    grid-row: 2;
+  }
 }
 
 .auth-list__phone {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
-  color: $accent-color;
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
 }
 .auth-list__mail {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: $secondary-text-color;
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+  }
 }
 
 .auth-list__link {
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     transition: color $timing-function;
 
     color: $secondary-text-color;
@@ -48,8 +67,11 @@
 }
 
 .auth-list__icon {
-  display: none;
-  @media screen and (min-width: $desktop) {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
     fill: currentColor;
     margin-right: 10px;
   }

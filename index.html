@@ -33,21 +33,25 @@
             aria-label="переключатель мобильного меню"
           >
             <use
+              data-menu-close
               class="menu-button__menu"
               href="./images/icons.svg#menu-header"
             ></use>
             <use
+              data-menu-open
               class="menu-button__close"
               href="./images/icons.svg#close-header"
             ></use>
           </svg>
         </button>
 
-        <div data-menu class="menu-container">
+        <div data-menu class="menu-container is-open">
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="" class="nav__link nav__link--current">Студия</a>
+                <a href="./index.html" class="nav__link nav__link--current"
+                  >Студия</a
+                >
               </li>
               <li class="nav__item">
                 <a href="./portfolio.html" class="nav__link">Портфолио</a>
@@ -58,7 +62,9 @@
             </ul>
           </nav>
           <ul class="auth-list">
-            <li class="auth-list__item auth-list__list--bottom">
+            <li
+              class="auth-list__item auth-list__item--top auth-list__item--bottom"
+            >
               <a
                 href="tel:+380961111111"
                 class="auth-list__link auth-list__phone"
@@ -292,8 +298,8 @@
       <!--Наша команда-->
       <section class="section team">
         <div class="container">
-          <h2 class="team__title title">Наша команда</h2>
-          <ul class="team__card-set card-set">
+          <h2 class="title">Наша команда</h2>
+          <ul class="card-set">
             <li class="card-set__item">
               <img
                 src="./images/img1.jpg"
@@ -544,66 +550,68 @@
     </main>
     <footer class="footer">
       <div class="container box">
-        <div class="box__address">
-          <a href="" class="logo logo--inverse"
-            ><span class="logo--color">Web</span>Studio</a
-          >
-          <address>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a
-                  href="https://goo.gl/maps/Y2mpPBSYpDZCKBSY6"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  class="footer__address"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="tablet-footer">
+          <div class="box__address">
+            <a href="" class="logo logo--inverse"
+              ><span class="logo--color">Web</span>Studio</a
+            >
+            <address>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a
+                    href="https://goo.gl/maps/Y2mpPBSYpDZCKBSY6"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="footer__address"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a href="mailto:info@example.com" class="footer__mail"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a href="tel:+380991111111" class="footer__phone"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join-us">
+            <p class="join-us__title">присоединяйтесь</p>
+            <ul class="join-us__socials">
+              <li class="join-us__item">
+                <a href="" class="join-us__link">
+                  <svg class="join-us__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a href="mailto:info@example.com" class="footer__mail"
-                  >info@example.com</a
-                >
+              <li class="join-us__item">
+                <a href="" class="join-us__link">
+                  <svg class="join-us__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a href="tel:+380991111111" class="footer__phone"
-                  >+38 099 111 11 11</a
-                >
+              <li class="join-us__item">
+                <a href="" class="join-us__link">
+                  <svg class="join-us__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join-us__item">
+                <a href="" class="join-us__link">
+                  <svg class="join-us__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="join-us">
-          <p class="join-us__title">присоединяйтесь</p>
-          <ul class="join-us__socials">
-            <li class="join-us__item">
-              <a href="" class="join-us__link">
-                <svg class="join-us__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join-us__item">
-              <a href="" class="join-us__link">
-                <svg class="join-us__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join-us__item">
-              <a href="" class="join-us__link">
-                <svg class="join-us__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join-us__item">
-              <a href="" class="join-us__link">
-                <svg class="join-us__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form name="signup-footer" class="form-footer">
           <div class="form-footer__field">
