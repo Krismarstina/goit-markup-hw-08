@@ -6,8 +6,12 @@
   @media screen and (min-width: $tablet) {
     display: grid;
     margin-left: 84px;
-
     align-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
   }
 }
 
@@ -18,7 +22,7 @@
 }
 
 .auth-list__item--top {
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-top: 10px;
     grid-row: 2;
   }
@@ -48,7 +52,7 @@
     transition: color $timing-function;
 
     color: $secondary-text-color;
-    @include centeredFlex(flex, center, null);
+    @include centeredFlex(flex, center, none);
 
     font-weight: 500;
     line-height: 1.14;

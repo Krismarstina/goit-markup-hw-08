@@ -12,4 +12,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @media screen and (min-width: $desktop) {
+    height: 600px;
+  }
 }

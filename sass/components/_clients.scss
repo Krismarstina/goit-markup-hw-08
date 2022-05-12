@@ -1,28 +1,42 @@
 .clients {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-top: -15px;
-  // @include centeredFlex();
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: 767px) {
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-top: -15px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-left: -30px;
     margin-top: -30px;
+  }
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex();
+    margin-top: 50px;
   }
 }
 
 .clients__item {
   cursor: pointer;
-  margin-left: 15px;
-  margin-top: 15px;
+  @media screen and (max-width: 767px) {
+    margin-left: 15px;
+    margin-top: 15px;
+    width: calc((100% - 30px) / 2);
+  }
 
-  width: calc((100% - 30px) / 2);
-
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-left: 30px;
     margin-top: 30px;
     width: calc(100% / 3 - 30px);
   }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
+
 .clients__link {
   transition: color $timing-function, border-color $timing-function;
 
@@ -38,12 +52,13 @@
     color: $accent-color;
     border-color: $accent-color;
   }
+  @media screen and (min-width: $desktop) {
+    padding: 16px 32px;
+    width: 170px;
+    height: 92px;
+  }
 }
 
 .clients__icon {
   fill: currentColor;
 }
-
-// .clients__item:not(:last-child) {
-//   margin-right: 30px;
-// }

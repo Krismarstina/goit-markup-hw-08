@@ -1,21 +1,29 @@
 .work {
-  display: none;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   @media screen and (min-width: $desktop) {
     padding-top: 0;
   }
 }
 .work__item {
-  display: none;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   @media screen and (min-width: $desktop) {
     position: relative;
-
     & + & {
       margin-left: 30px;
     }
   }
 }
 .work__label {
-  display: none;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   @media screen and (min-width: $desktop) {
     position: absolute;
     bottom: 0;
