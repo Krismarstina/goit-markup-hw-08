@@ -182,12 +182,18 @@ img {
     display: flex;
   }
 }
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: contents;
+  }
+}
 
 @media screen and (max-width: 767px) {
-  .menu-container.is-open .mobile-menu.is-open {
+  .menu-container.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    z-index: 3;
   }
 }
 
@@ -391,15 +397,36 @@ img {
   margin: -1px;
 }
 
-.portfolio {
-  display: flex;
-  align-items: none;
-  justify-content: center;
-  margin-bottom: 50px;
+@media screen and (max-width: 767px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    display: flex;
+    align-items: none;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__item + .portfolio__item {
   margin-left: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item.portfolio__item--margin-left {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item--margin-bottom {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__button {
@@ -422,17 +449,36 @@ img {
   border-radius: 4px;
 }
 
-.portfolio-card-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+@media screen and (min-width: 768px) {
+  .portfolio-card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
-.portfolio-card-set__item {
-  flex-basis: calc((100% - 90px) / 3);
-  margin-left: 30px;
-  margin-top: 30px;
+@media screen and (min-width: 768px) {
+  .portfolio-card-set__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-card-set__item {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }
 
 .portfolio-card-set__link {

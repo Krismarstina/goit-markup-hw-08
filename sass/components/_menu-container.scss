@@ -17,13 +17,15 @@
   @media screen and (min-width: $tablet) {
     display: flex;
   }
+  @media screen and (min-width: $desktop) {
+    display: contents;
+  }
 }
 .menu-container.is-open {
   @media screen and (max-width: 767px) {
-    .mobile-menu.is-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 3;
   }
 }

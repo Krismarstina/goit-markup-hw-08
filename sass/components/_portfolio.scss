@@ -1,10 +1,28 @@
 .portfolio {
-  @include centeredFlex(flex, none);
-  margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex(flex, none);
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__item + .portfolio__item {
   margin-left: 8px;
+}
+.portfolio__item.portfolio__item--margin-left {
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
+}
+
+.portfolio__item--margin-bottom {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__button {
