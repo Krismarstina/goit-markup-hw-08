@@ -7,15 +7,15 @@
   @media screen and (min-width: $tablet) {
     display: none;
   }
-}
 
-.menu-button__svg {
-  padding: 12px 8px;
+  &__svg {
+    padding: 12px 8px;
 
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    fill: $accent-color;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      fill: $accent-color;
+    }
   }
 }
 

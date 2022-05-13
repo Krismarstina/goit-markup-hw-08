@@ -13,60 +13,61 @@
     margin-left: auto;
     align-items: center;
   }
-}
-
-.auth-list__item--bottom {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 32px;
-  }
-}
-
-.auth-list__item--top {
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    margin-top: 10px;
-    grid-row: 2;
-  }
-}
-
-.auth-list__phone {
-  @media screen and (max-width: 767px) {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-    color: $accent-color;
-  }
-}
-.auth-list__mail {
-  @media screen and (max-width: 767px) {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    color: $secondary-text-color;
-  }
-}
-
-.auth-list__link {
-  @media screen and (min-width: $tablet) {
-    transition: color $timing-function;
-
-    color: $secondary-text-color;
-    @include centeredFlex(flex, center, none);
-
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    &:hover,
-    &:focus {
+  &__phone {
+    @media screen and (max-width: 767px) {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: 0.02em;
       color: $accent-color;
     }
   }
+  &__mail {
+    @media screen and (max-width: 767px) {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      color: $secondary-text-color;
+    }
+  }
+
+  &__link {
+    @media screen and (min-width: $tablet) {
+      transition: color $timing-function;
+
+      color: $secondary-text-color;
+      @include centeredFlex(flex, center, none);
+
+      font-weight: 500;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
 }
-.auth-list__item + .auth-list__item {
-  @media screen and (min-width: $desktop) {
-    margin-left: 50px;
+.auth-list__item {
+  & + & {
+    @media screen and (min-width: $desktop) {
+      margin-left: 50px;
+    }
+  }
+
+  &--bottom {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &--top {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-top: 10px;
+      grid-row: 2;
+    }
   }
 }
 

@@ -2,6 +2,48 @@
   background-color: $footer-background-color;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  &__list {
+    margin-top: 20px;
+    font-style: normal;
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 20px;
+      width: 231px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__address {
+    transition: color $timing-function;
+
+    color: $primary-white-color;
+    line-height: 1.71;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__mail,
+  &__phone {
+    transition: color $timing-function;
+
+    color: $address-grey-color;
+    line-height: 1.71;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
 }
 
 .tablet-footer {
@@ -19,113 +61,69 @@
   color: $primary-white-color;
 }
 
-.box__address {
-  @media screen and (max-width: 1199px) {
-    text-align: center;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-right: 70px;
-  }
-}
-
-.footer__list {
-  margin-top: 20px;
-}
-.footer__item:not(:last-child) {
-  margin-bottom: 8px;
-}
-
 .box {
   @media screen and (min-width: $desktop) {
     @include centeredFlex(flex, baseline, none);
   }
-}
-
-.footer__item:not(:last-child) {
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 9px;
+  &__address {
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 70px;
+    }
   }
 }
 
-.footer__list {
-  font-style: normal;
+.join-us {
+  &__title {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-top: 60px;
+    }
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-white-color;
 
-  @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+
+  &__socials {
+    @media screen and (max-width: 1199px) {
+      justify-content: center;
+    }
+    display: flex;
     margin-top: 20px;
-    width: 231px;
   }
-}
 
-.footer__address {
-  transition: color $timing-function;
-
-  color: $primary-white-color;
-  line-height: 1.71;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
+  &__item:not(:last-child) {
+    margin-right: 10px;
   }
-}
-.footer__mail,
-.footer__phone {
-  transition: color $timing-function;
 
-  color: $address-grey-color;
-  line-height: 1.71;
+  &__link {
+    transition: background-color $timing-function;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
+    @include centeredFlex();
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $footer-link-bg-color;
+    color: $primary-white-color;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
   }
-}
 
-.join-us__title {
-  @media screen and (max-width: 767px) {
-    text-align: center;
-    margin-top: 60px;
+  &__icon {
+    fill: currentColor;
   }
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: $primary-white-color;
-
-  @media screen and (min-width: $tablet) {
-    text-align: center;
-    margin-top: 0;
-  }
-}
-
-.join-us__socials {
-  @media screen and (max-width: 1199px) {
-    justify-content: center;
-  }
-  display: flex;
-  margin-top: 20px;
-}
-.join-us__item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.join-us__link {
-  transition: background-color $timing-function;
-
-  @include centeredFlex();
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: $footer-link-bg-color;
-  color: $primary-white-color;
-
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
-  }
-}
-
-.join-us__icon {
-  fill: currentColor;
 }
 
 .form-footer {
@@ -138,81 +136,81 @@
     @include centeredFlex(flex, flex-end, none);
     margin-left: auto;
   }
-}
 
-.form-footer__field {
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-direction: column;
+  &__field {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      align-items: center;
+    }
   }
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    align-items: center;
+
+  &__label {
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    margin-bottom: 20px;
   }
-}
 
-.form-footer__label {
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $primary-white-color;
-  margin-bottom: 20px;
-}
+  &__mail {
+    outline: none;
+    margin-top: 20px;
 
-.form-footer__mail {
-  outline: none;
-  margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    padding: 15px 16px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
 
-  width: 100%;
-  height: 50px;
-  padding: 15px 16px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
 
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-
-  @media screen and (min-width: $tablet) {
-    width: 450px;
-    margin-top: 0;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-right: 12px;
-    width: 358px;
-  }
-}
-
-.footer-btn__sign-up {
-  @include centeredFlex(flex, center, none);
-
-  margin-top: 20px;
-  width: 200px;
-  height: 50px;
-  padding: 10px 28px;
-  background: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: $primary-white-color;
-
-  &::after {
-    content: "";
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M24 0 0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0Z' fill='%23fff'/%3e%3c/svg%3e");
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
+    @media screen and (min-width: $tablet) {
+      width: 450px;
+      margin-top: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 12px;
+      width: 358px;
+    }
   }
 }
 
 .footer-btn {
   display: flex;
   justify-content: center;
+
+  &__sign-up {
+    @include centeredFlex(flex, center, none);
+
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    padding: 10px 28px;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;
+
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M24 0 0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0Z' fill='%23fff'/%3e%3c/svg%3e");
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+    }
+  }
 }

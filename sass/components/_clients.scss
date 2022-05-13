@@ -1,6 +1,5 @@
 .clients {
   @media screen and (max-width: 767px) {
-    margin-left: 15px;
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
@@ -8,6 +7,8 @@
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
   }
@@ -15,50 +16,50 @@
     @include centeredFlex();
     margin-top: 50px;
   }
-}
 
-.clients__item {
-  cursor: pointer;
-  @media screen and (max-width: 767px) {
-    margin-left: 15px;
-    margin-top: 15px;
-    width: calc((100% - 30px) / 2);
-  }
+  &__item {
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+      margin-left: 15px;
+      margin-top: 15px;
+      width: calc((100% - 30px) / 2);
+    }
 
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    margin-left: 30px;
-    margin-top: 30px;
-    width: calc(100% / 3 - 30px);
-  }
-  @media screen and (min-width: $desktop) {
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-left: 30px;
+      margin-top: 30px;
+      width: calc(100% / 3 - 30px);
+    }
+    @media screen and (min-width: $desktop) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
-}
 
-.clients__link {
-  transition: color $timing-function, border-color $timing-function;
+  &__link {
+    transition: color $timing-function, border-color $timing-function;
 
-  @include centeredFlex();
+    @include centeredFlex();
 
-  padding: 16px 52px;
-  color: $clients-link_color;
-  border: 1px solid $clients-link_color;
-  border-radius: 4px;
+    padding: 16px 52px;
+    color: $clients-link_color;
+    border: 1px solid $clients-link_color;
+    border-radius: 4px;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    border-color: $accent-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 16px 32px;
+      width: 170px;
+      height: 92px;
+    }
   }
-  @media screen and (min-width: $desktop) {
-    padding: 16px 32px;
-    width: 170px;
-    height: 92px;
-  }
-}
 
-.clients__icon {
-  fill: currentColor;
+  &__icon {
+    fill: currentColor;
+  }
 }

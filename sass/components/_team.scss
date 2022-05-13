@@ -13,43 +13,42 @@
   @media screen and (min-width: $desktop) {
     display: flex;
   }
-}
 
-.card-set__item {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  margin-top: 30px;
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    margin-left: 30px;
-    width: calc(100% / 2 - 30px);
-  }
-  @media screen and (min-width: $desktop) {
-    margin-top: 0;
-    & + & {
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-top: 30px;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
       margin-left: 30px;
+      width: calc(100% / 2 - 30px);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-top: 0;
+      & + & {
+        margin-left: 30px;
+      }
     }
   }
-}
 
-.card-set__content {
-  @media screen and (max-width: 1199px) {
+  &__content {
+    @media screen and (max-width: 1199px) {
+    }
+    padding: 30px 0 24px;
+    background-color: $primary-white-color;
+
+    @media screen and (min-width: $desktop) {
+      padding: 30px 32px;
+    }
   }
-  padding: 30px 0 24px;
-  background-color: $primary-white-color;
-
-  @media screen and (min-width: $desktop) {
-    padding: 30px 32px;
-  }
-
-  .card-set__position {
+  &__position {
     color: $secondary-text-color;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
   }
 
-  .card-set__name {
+  &__name {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -57,21 +56,22 @@
     text-align: center;
   }
 
-  .card-set__socials {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  &__socials {
+    @include centeredFlex();
     margin-top: 16px;
     @media screen and (min-width: $desktop) {
       width: 206px;
       height: 44px;
     }
   }
-  .socials__item:not(:first-child) {
+}
+
+.socials {
+  &__item:not(:first-child) {
     margin-left: 10px;
   }
 
-  .socials__link {
+  &__link {
     @include centeredFlex();
 
     width: 44px;

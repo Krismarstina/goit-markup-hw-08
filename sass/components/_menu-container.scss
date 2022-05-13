@@ -20,12 +20,13 @@
   @media screen and (min-width: $desktop) {
     display: contents;
   }
-}
-.menu-container.is-open {
-  @media screen and (max-width: 767px) {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    z-index: 3;
+
+  &.is-open {
+    @media screen and (max-width: 767px) {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      z-index: 3;
+    }
   }
 }

@@ -1,17 +1,17 @@
 .page-header {
   position: relative;
   border-bottom: 1px solid $page-header-border;
-}
-.page-header__header {
-  display: flex;
-  align-items: center;
-  @media screen and (max-width: 767px) {
-    justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
 
-  @media screen and (min-width: $desktop) {
-    @include centeredFlex(flex, center, none);
+  &__header {
+    @include centeredFlex(flex, center, null);
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include centeredFlex(flex, center, null);
+    }
   }
 }
