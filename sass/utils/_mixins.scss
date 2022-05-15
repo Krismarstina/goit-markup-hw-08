@@ -3,3 +3,14 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+@mixin wrapper($type: flex, $wrap: wrap) {
+  display: $type;
+  flex-wrap: $wrap;
+}
+@mixin font($fs, $fw, $lh, $ls) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

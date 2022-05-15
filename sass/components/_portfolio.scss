@@ -1,7 +1,6 @@
 .portfolio {
   @media screen and (max-width: 767px) {
-    display: flex;
-    flex-wrap: wrap;
+    @include wrapper();
     margin-bottom: 40px;
   }
   @media screen and (min-width: $tablet) {
@@ -20,9 +19,7 @@
     color: $primary-text-color;
     background-color: $secondary-background-color;
     cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
+    @include font(16px, 500, 1.62, null);
     text-align: center;
 
     &:hover,
@@ -39,7 +36,7 @@
     & + & {
       margin-left: 8px;
     }
-    &&__item--margin-left {
+    &.portfolio__item--margin-left {
       @media screen and (max-width: 767px) {
         margin-left: 0;
       }

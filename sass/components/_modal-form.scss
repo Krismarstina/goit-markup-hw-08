@@ -7,7 +7,7 @@
     padding: 0;
     height: 58px;
 
-    &--comments {
+    &--margin-bottom {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -51,9 +51,7 @@
     margin-right: auto;
     margin-bottom: 4px;
 
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
+    @include font(12px, null, 1.16, 0.01em);
     color: $secondary-text-color;
   }
 
@@ -84,10 +82,7 @@
     &::placeholder {
       font-family: "Roboto";
       font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.01em;
+      @include font(14px, 400, 1.14, 0.01em);
       color: rgba(117, 117, 117, 0.5);
     }
   }
@@ -116,9 +111,11 @@
   }
   &__label {
     @include centeredFlex(flex, center, null);
-    font-size: 12px;
-    line-height: 1.16;
+    @include font(12px, null, 1.16, null);
     color: $secondary-text-color;
+    @media screen and (min-width: $desktop) {
+      @include font(14px, null, 1.71, null);
+    }
   }
 
   &__icon {

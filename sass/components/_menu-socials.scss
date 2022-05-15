@@ -1,8 +1,5 @@
 .menu-socials {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
+  @include centeredFlex(flex, center, flex-start);
   margin-top: 64px;
 
   @media screen and (min-width: $tablet) {
@@ -11,10 +8,7 @@
 
   &__item {
     position: relative;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
+    @include font(18px, 500, 1.22, 0.02em);
 
     color: $accent-color;
 

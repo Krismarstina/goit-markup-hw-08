@@ -128,18 +128,19 @@ img {
 .logo {
   color: #000000;
   font-family: Raleway, sans-serif;
-  font-weight: 700;
   font-size: 24px;
+  font-weight: 700;
   line-height: 1.17;
 }
 @media screen and (min-width: 1200px) {
   .logo {
     align-self: center;
     font-size: 26px;
+    font-weight: 700;
     line-height: 1.19;
   }
 }
-.logo--color {
+.logo__color--accent {
   color: #2196f3;
 }
 
@@ -222,8 +223,8 @@ img {
 }
 .nav__link {
   color: #212121;
-  font-weight: 500;
   font-size: 40px;
+  font-weight: 500;
   line-height: 1.18;
   letter-spacing: 0.02em;
 }
@@ -291,14 +292,14 @@ img {
 @media screen and (min-width: 1200px) {
   .auth-list {
     display: flex;
-    margin-left: auto;
     align-items: center;
+    margin-left: auto;
   }
 }
 @media screen and (max-width: 767px) {
   .auth-list__phone {
-    font-weight: 500;
     font-size: 34px;
+    font-weight: 500;
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: #2196f3;
@@ -306,8 +307,8 @@ img {
 }
 @media screen and (max-width: 767px) {
   .auth-list__mail {
-    font-weight: 500;
     font-size: 24px;
+    font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: #757575;
@@ -360,8 +361,8 @@ img {
 
 .menu-socials {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   margin-top: 64px;
 }
 @media screen and (min-width: 768px) {
@@ -371,8 +372,8 @@ img {
 }
 .menu-socials__item {
   position: relative;
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
@@ -401,13 +402,13 @@ img {
 .hero__title {
   margin: 0 auto;
   width: 360px;
-  font-weight: 900;
   font-size: 26px;
+  font-weight: 900;
   line-height: 1.62;
+  letter-spacing: 0.06em;
   color: #ffffff;
   margin-bottom: 30px;
   text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1200px) {
@@ -451,9 +452,6 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scaleX(0.5);
-}
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
@@ -462,6 +460,15 @@ img {
     transform: translate(-50%, -50%) scaleX(1);
     transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-height: 581px;
+    min-width: 528px;
+  }
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleX(0.5);
 }
 .modal__btn {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -484,11 +491,11 @@ img {
   outline: none;
 }
 .modal__title {
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   line-height: 1.5;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: #212121;
   margin-bottom: 30px;
 }
@@ -508,7 +515,7 @@ img {
   padding: 0;
   height: 58px;
 }
-.form__field--comments {
+.form__field--margin-bottom {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -571,27 +578,27 @@ img {
 .form__textarea::-moz-placeholder {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  font-weight: 400;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .form__textarea:-ms-input-placeholder {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  font-weight: 400;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .form__textarea::placeholder {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  font-weight: 400;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -619,6 +626,12 @@ img {
   font-size: 12px;
   line-height: 1.16;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .checkbox__icon {
   display: flex;
@@ -738,8 +751,8 @@ img {
 }
 .features__text {
   color: #757575;
-  line-height: 1.71;
   font-size: 14px;
+  line-height: 1.71;
 }
 
 @media screen and (max-width: 1199px) {
@@ -845,12 +858,14 @@ img {
   color: #757575;
   font-size: 16px;
   line-height: 1.18;
+  font-size: 16px;
+  line-height: 1.18;
   text-align: center;
 }
 .card-set__name {
   margin-bottom: 10px;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.18;
   text-align: center;
 }
@@ -1012,7 +1027,7 @@ img {
   }
 }
 
-.logo--inverse {
+.logo__color--inverse {
   color: #ffffff;
 }
 
@@ -1020,7 +1035,6 @@ img {
   .box {
     display: flex;
     align-items: baseline;
-    justify-content: none;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1092,7 +1106,6 @@ img {
   .form-footer {
     display: flex;
     align-items: flex-end;
-    justify-content: none;
     margin-left: auto;
   }
 }
@@ -1149,7 +1162,6 @@ img {
 .footer-btn__sign-up {
   display: flex;
   align-items: center;
-  justify-content: none;
   margin-top: 20px;
   width: 200px;
   height: 50px;
@@ -1158,8 +1170,8 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: #ffffff;
