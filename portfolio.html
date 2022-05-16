@@ -24,8 +24,13 @@
     <!--шапка-->
     <header class="page-header">
       <div class="container page-header__header">
-        <a href="" class="logo"><span class="logo--color">Web</span>Studio</a>
-        <button type="button" class="menu-button is-open">
+        <a href="" class="logo"><span class="logo__studio">Web</span>Studio</a>
+        <button
+          type="button"
+          class="menu-button is-open"
+          data-menu-button
+          aria-expanded="false"
+        >
           <svg
             width="40"
             height="40"
@@ -115,7 +120,7 @@
                 Приложения
               </button>
             </li>
-            <li class="portfolio__item portfolio__item--margin-left">
+            <li class="portfolio__item">
               <button type="button" class="portfolio__button">Дизайн</button>
             </li>
             <li class="portfolio__item">
@@ -368,7 +373,7 @@
         <div class="tablet-footer">
           <div class="box__address">
             <a href="" class="logo logo--inverse"
-              ><span class="logo--color">Web</span>Studio</a
+              ><span class="logo__studio">Web</span>Studio</a
             >
             <address>
               <ul class="footer__list">

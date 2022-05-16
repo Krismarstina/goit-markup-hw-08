@@ -140,7 +140,7 @@ img {
     line-height: 1.19;
   }
 }
-.logo__color--accent {
+.logo__studio {
   color: #2196f3;
 }
 
@@ -177,9 +177,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .menu-container {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -201,10 +199,8 @@ img {
 }
 @media screen and (max-width: 767px) {
   .menu-container.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    z-index: 3;
+    display: block;
+    z-index: 50;
   }
 }
 
@@ -515,7 +511,7 @@ img {
   padding: 0;
   height: 58px;
 }
-.form__field--margin-bottom {
+.form__field-margin {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1027,7 +1023,7 @@ img {
   }
 }
 
-.logo__color--inverse {
+.logo--inverse {
   color: #ffffff;
 }
 

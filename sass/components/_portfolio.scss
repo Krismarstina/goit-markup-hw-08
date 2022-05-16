@@ -33,19 +33,16 @@
     }
   }
   &__item {
-    & + & {
-      margin-left: 8px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
     }
-    &.portfolio__item--margin-left {
-      @media screen and (max-width: 767px) {
-        margin-left: 0;
-      }
+    &:not(:last-child) {
+      margin-right: 8px;
     }
-
-    &--margin-bottom {
-      @media screen and (max-width: 767px) {
-        margin-bottom: 15px;
-      }
-    }
+    // &.portfolio__item{
+    //   @media screen and (max-width: 767px) {
+    //     margin-left: 0;
+    //   }
+    // }
   }
 }
