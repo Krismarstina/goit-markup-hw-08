@@ -10,7 +10,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../../../goit-markup-hw-08/images/overlay-mobile.jpg);
+    url(../../images/overlay-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +25,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../../goit-markup-hw-08/images/overlay-mobile@2x.jpg);
+      url(../../images/overlay-mobile@2x.jpg);
   }
 }
 
@@ -37,7 +37,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../../goit-markup-hw-08/images/overlay-tablet.jpg);
+      url(../../images/overlay-tablet.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -49,7 +49,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../../goit-markup-hw-08/images/overlay-tablet@2x.jpg);
+        url(../../images/overlay-tablet@2x.jpg);
     }
   }
 }
@@ -65,7 +65,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../../goit-markup-hw-08/images/overlay-desktop.jpg);
+      url(../../images/overlay-desktop.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -77,7 +77,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../../goit-markup-hw-08/images/overlay-desktop@2x.jpg);
+        url(../../images/overlay-desktop@2x.jpg);
     }
   }
 }
