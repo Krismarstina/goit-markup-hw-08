@@ -30,6 +30,7 @@
           class="menu-button is-open"
           data-menu-button
           aria-expanded="false"
+          aria-controls="data-menu"
         >
           <svg
             width="40"
@@ -50,7 +51,7 @@
           </svg>
         </button>
 
-        <div data-menu class="menu-container is-open">
+        <div data-menu class="menu-container">
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -94,10 +95,26 @@
           </ul>
 
           <ul class="menu-socials">
-            <li class="menu-socials__item">Instagram</li>
-            <li class="menu-socials__item">Twitter</li>
-            <li class="menu-socials__item">Facebook</li>
-            <li class="menu-socials__item">LinkedIn</li>
+            <li class="menu-socials__item">
+              <a href="https://www.instagram.com" class="menu-socials__link">
+                Instagram</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a href="https://www.twitter.com" class="menu-socials__link"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a href="https://www.facebook.com" class="menu-socials__link"
+                >Facebook</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a href="https://www.LinkedIn.com" class="menu-socials__link"
+                >LinkedIn</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -271,7 +288,11 @@
           <ul class="work__list">
             <li class="work__item">
               <img
-                src="./images/box1.jpg"
+                srcset="
+                  ./images/desktop/box1-min.jpg    1x,
+                  ./images/desktop/box1@2x-min.jpg 2x
+                "
+                src="./images/desktop/box1-min.jpg"
                 alt="пишет код"
                 width="370"
                 height="294"
@@ -280,6 +301,11 @@
             </li>
             <li class="work__item">
               <img
+                srcset="
+                  ./images/desktop/box2-min.jpg    1x,
+                  ./images/desktop/box2@2x-min.jpg 2x
+                "
+                src="./images/desktop/box2-min.jpg"
                 src="./images/box2.jpg"
                 alt="дизайн интерфейса мобильного приложения"
                 width="370"
@@ -289,6 +315,11 @@
             </li>
             <li class="work__item">
               <img
+                srcset="
+                  ./images/desktop/box3-min.jpg    1x,
+                  ./images/desktop/box3@2x-min.jpg 2x
+                "
+                src="./images/desktop/box3-min.jpg"
                 src="./images/box3.jpg"
                 alt="подборка цвета для дизайна"
                 width="370"
@@ -306,12 +337,34 @@
           <h2 class="title">Наша команда</h2>
           <ul class="card-set">
             <li class="card-set__item">
-              <img
-                src="./images/img1.jpg"
-                alt="фото Игорь Демьяненко"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team1.jpg    1x,
+                    ./images/mobile/team1@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team1.jpg    1x,
+                    ./images/tablet/team1@2x.jpg 2x
+                  "
+                  media="(min-width:768px) "
+                />
+                <source
+                  srcset="
+                    ./images/desktop/team1.jpg    1x,
+                    ./images/desktop/team1@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  src="./images/mobile/team1.jpg"
+                  alt="фото Игорь Демьяненко"
+                />
+              </picture>
+
               <div class="card-set__content">
                 <h3 class="card-set__name">Игорь Демьяненко</h3>
                 <p lang="en" class="card-set__position">Product Designer</p>
@@ -348,12 +401,31 @@
               </div>
             </li>
             <li class="card-set__item">
-              <img
-                src="./images/img2.jpg"
-                alt="фото Ольга Репина"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team2.jpg    1x,
+                    ./images/mobile/team2@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team2.jpg    1x,
+                    ./images/tablet/team2@2x.jpg 2x
+                  "
+                  media="(min-width:768px) "
+                />
+                <source
+                  srcset="
+                    ./images/desktop/team2.jpg    1x,
+                    ./images/desktop/team2@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/mobile/team2.jpg" alt="фото Ольга Репина" />
+              </picture>
+
               <div class="card-set__content">
                 <h3 class="card-set__name">Ольга Репина</h3>
                 <p lang="en" class="card-set__position">Frontend Developer</p>
@@ -390,12 +462,34 @@
               </div>
             </li>
             <li class="card-set__item">
-              <img
-                src="./images/img3.jpg"
-                alt="фото Николай Тарасов"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team3.jpg    1x,
+                    ./images/mobile/team3@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team3.jpg    1x,
+                    ./images/tablet/team3@2x.jpg 2x
+                  "
+                  media="(min-width:768px) "
+                />
+                <source
+                  srcset="
+                    ./images/desktop/team3.jpg    1x,
+                    ./images/desktop/team3@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  src="./images/mobile/team3.jpg"
+                  alt="фото Николай Тарасов"
+                />
+              </picture>
+
               <div class="card-set__content">
                 <h3 class="card-set__name">Николай Тарасов</h3>
                 <p lang="en" class="card-set__position">Marketing</p>
@@ -432,12 +526,34 @@
               </div>
             </li>
             <li class="card-set__item">
-              <img
-                src="./images/img4.jpg"
-                alt="фото Михаил Ермаков"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team4.jpg    1x,
+                    ./images/mobile/team4@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team4.jpg    1x,
+                    ./images/tablet/team4@2x.jpg 2x
+                  "
+                  media="(min-width:768px) "
+                />
+                <source
+                  srcset="
+                    ./images/desktop/team4.jpg    1x,
+                    ./images/desktop/team4@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  src="./images/mobile/team4.jpg"
+                  alt="фото Михаил Ермаков"
+                />
+              </picture>
+
               <div class="card-set__content">
                 <h3 class="card-set__name">Михаил Ермаков</h3>
                 <p lang="en" class="card-set__position">UI Designer</p>

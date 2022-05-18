@@ -6,14 +6,17 @@
   &__list {
     @media screen and (min-width: $tablet) {
       display: flex;
-      margin-left: 95px;
+      margin-left: 88px;
       position: relative;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-left: 95px;
     }
   }
 
   &__link {
     color: $primary-text-color;
-    @include font( 40px, 500, 1.18, 0.02em);
+    @include font(40px, 500, 1.18, 0.02em);
 
     &:hover,
     &:focus {
@@ -27,7 +30,7 @@
       padding-bottom: 32px;
 
       color: $primary-text-color;
-      @include font( 14px, 500, 1.14, 0.02em);
+      @include font(14px, 500, 1.14, 0.02em);
 
       &:hover,
       &:focus {

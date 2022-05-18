@@ -88,9 +88,13 @@
   }
 
   &__checkbox {
-    width: 425px;
+    width: 370px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: $desktop) {
+      width: 425px;
+    }
   }
 
   &__btn {
@@ -111,7 +115,7 @@
   }
   &__label {
     @include centeredFlex(flex, center, null);
-    @include font(12px, null, 1.16, null);
+    @include font(12px, null, 1.16, 0.03em);
     color: $secondary-text-color;
     @media screen and (min-width: $desktop) {
       @include font(14px, null, 1.71, null);

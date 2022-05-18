@@ -1,5 +1,4 @@
 .overlay {
-  max-width: 100%;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -8,11 +7,71 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/overlay.jpg);
+    url(/images/mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  @media screen and (min-width: $desktop) {
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/mobile2x.jpg);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .overlay {
+    height: 400px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/tablet.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .overlay {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(/images/tablet2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .overlay {
     height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/desktop.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .overlay {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(/images/desktop2x.jpg);
+    }
   }
 }
