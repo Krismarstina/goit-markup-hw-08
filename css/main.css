@@ -174,7 +174,7 @@ img {
   .menu-container {
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
