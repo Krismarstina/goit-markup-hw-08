@@ -1,5 +1,10 @@
-.menu-button {
-  display: inline-flex;
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   border: none;
   background-color: transparent;
   padding: 0;
@@ -10,7 +15,7 @@
   }
 
   &__svg {
-    padding: 12px 8px;
+    padding: 10px 7px;
 
     &:hover,
     &:focus {
@@ -19,15 +24,20 @@
     }
   }
 }
-
-.menu-button__close {
-  display: none;
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
-.menu-button.is-open .menu-button__close {
-  display: block;
-}
+// .menu-toggle__close {
+//   display: none;
+// }
 
-.menu-button.is-open .menu-button__menu {
-  display: none;
-}
+// .menu-toggle.is-open .menu-button__close {
+//   display: block;
+// }
+
+// .menu-button.is-open .menu-button__menu {
+//   display: none;
+// }

@@ -1,28 +1,14 @@
 .auth-list {
   @media screen and (max-width: 767px) {
-    margin-top: 302px;
+    display: none;
   }
 
   @media screen and (min-width: $tablet) {
-    display: grid;
-    margin-left: 66px;
     align-content: center;
   }
   @media screen and (min-width: $desktop) {
     @include centeredFlex(flex, center, null);
     margin-left: auto;
-  }
-  &__phone {
-    @media screen and (max-width: 767px) {
-      @include font(34px, 500, 1.18, 0.02em);
-      color: $accent-color;
-    }
-  }
-  &__mail {
-    @media screen and (max-width: 767px) {
-      @include font(24px, 500, 1.17, 0.02em);
-      color: $secondary-text-color;
-    }
   }
 
   &__link {
@@ -47,16 +33,9 @@
     }
   }
 
-  &--bottom {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 32px;
-    }
-  }
-
   &--top {
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
       margin-top: 10px;
-      grid-row: 2;
     }
   }
 }

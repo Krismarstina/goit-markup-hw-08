@@ -26,80 +26,135 @@
       <div class="container page-header__header">
         <a href="" class="logo"><span class="logo__studio">Web</span>Studio</a>
         <button
-          type="button"
-          class="menu-button is-open"
-          data-menu-button
+          class="menu-toggle js-open-menu"
           aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <svg
             width="40"
             height="40"
-            class="menu-button__svg"
+            class="menu-toggle__svg"
             aria-label="переключатель мобильного меню"
           >
-            <use
-              data-menu-open
-              class="menu-button__menu"
-              href="./images/icons.svg#menu-header"
-            ></use>
-            <use
-              data-menu-close
-              class="menu-button__close"
-              href="./images/icons.svg#close-header"
-            ></use>
+            <use href="./images/icons.svg#close-header"></use>
+          </svg>
+        </button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link nav__link--current"
+                >Студия</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__link nav__link--current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="auth-list">
+          <li
+            class="auth-list__item auth-list__item--top auth-list__item--bottom"
+          >
+            <a
+              href="tel:+380961111111"
+              class="auth-list__link auth-list__phone"
+            >
+              <svg class="auth-list__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="auth-list__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="auth-list__link auth-list__mail"
+            >
+              <svg class="auth-list__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg
+            width="40"
+            height="40"
+            class="menu-toggle__svg"
+            aria-label="переключатель мобильного меню"
+          >
+            <use href="./images/icons.svg#menu-header"></use>
           </svg>
         </button>
 
-        <div data-menu class="menu-container">
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="./index.html" class="nav__link nav__link">Студия</a>
-              </li>
-              <li class="nav__item">
-                <a href="./portfolio.html" class="nav__link nav__link--current"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="nav__item">
-                <a href="" class="nav__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="auth-list">
-            <li
-              class="auth-list__item auth-list__item--top auth-list__item--bottom"
+        <nav class="menu-nav">
+          <ul class="menu-nav__list">
+            <li class="menu-nav__item">
+              <a href="./index.html" class="menu-nav__link">Студия</a>
+            </li>
+            <li class="menu-nav__item">
+              <a
+                href="./portfolio.html"
+                class="menu-nav__link menu-nav__link--current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="menu-nav__item">
+              <a href="" class="menu-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="menu-contacts">
+          <li
+            class="menu-contacts__item menu-contacts__item--top menu-contacts__item--bottom"
+          >
+            <a
+              href="tel:+380961111111"
+              class="menu-contacts__link menu-contacts__phone"
             >
-              <a
-                href="tel:+380961111111"
-                class="auth-list__link auth-list__phone"
-              >
-                <svg class="auth-list__icon" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-            <li class="auth-list__item">
-              <a
-                href="mailto:info@devstudio.com"
-                class="auth-list__link auth-list__mail"
-              >
-                <svg class="auth-list__icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-          </ul>
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="menu-contacts__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="menu-contacts__link menu-contacts__mail"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
 
-          <ul class="menu-socials">
-            <li class="menu-socials__item">Instagram</li>
-            <li class="menu-socials__item">Twitter</li>
-            <li class="menu-socials__item">Facebook</li>
-            <li class="menu-socials__item">LinkedIn</li>
-          </ul>
-        </div>
+        <ul class="menu-socials">
+          <li class="menu-socials__item">
+            <a href="https://www.instagram.com" class="menu-socials__link">
+              Instagram</a
+            >
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://www.twitter.com" class="menu-socials__link"
+              >Twitter</a
+            >
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://www.facebook.com" class="menu-socials__link"
+              >Facebook</a
+            >
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://www.LinkedIn.com" class="menu-socials__link"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -644,7 +699,14 @@
         </form>
       </div>
     </footer>
-    <script src="./js/mobile-menu.js"></script>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

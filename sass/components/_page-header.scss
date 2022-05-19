@@ -3,15 +3,12 @@
   border-bottom: 1px solid $page-header-border;
 
   &__header {
-    @include centeredFlex(flex, center, null);
-    @media screen and (max-width: 767px) {
-      justify-content: space-between;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+    @include centeredFlex(flex, center, space-between);
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-    @media screen and (min-width: $desktop) {
-      @include centeredFlex(flex, center, null);
+    @media screen and (min-width: $tablet) {
+      padding: 0;
     }
   }
 }
