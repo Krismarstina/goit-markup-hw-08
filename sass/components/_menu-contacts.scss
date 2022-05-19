@@ -1,0 +1,20 @@
+.menu-contacts {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  margin-top: 302px;
+
+  &__phone {
+    @include font(34px, 500, 1.18, 0.02em);
+    color: $accent-color;
+  }
+  &__mail {
+    @include font(24px, 500, 1.17, 0.02em);
+    color: $secondary-text-color;
+  }
+}
+
+.menu-contacts__item--bottom {
+  margin-bottom: 32px;
+}

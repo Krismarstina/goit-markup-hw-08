@@ -1,0 +1,26 @@
+@media screen and (min-width: $tablet) {
+  .menu-nav {
+    display: none;
+  }
+}
+.menu-nav__link {
+  color: $primary-text-color;
+  @include font(40px, 500, 1.18, 0.02em);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &--current {
+    color: $accent-color;
+  }
+}
+
+.menu-nav__item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+}
