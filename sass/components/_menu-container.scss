@@ -1,6 +1,6 @@
 .menu-container {
   @media screen and (max-width: 767px) {
-    transform: translateX(100%);
+    transform: translateY(-103%);
     transition: transform 250ms ease-in-out;
 
     position: absolute;
@@ -14,7 +14,7 @@
   }
   &.is-open {
     @media screen and (max-width: 767px) {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 

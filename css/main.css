@@ -172,7 +172,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .menu-container {
-    transform: translateX(100%);
+    transform: translateY(-103%);
     transition: transform 250ms ease-in-out;
     position: absolute;
     top: 0;
@@ -186,7 +186,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .menu-container.is-open {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 @media screen and (min-width: 768px) {
