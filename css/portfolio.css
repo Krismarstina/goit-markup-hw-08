@@ -160,10 +160,11 @@ img {
     transform: translateY(-103%);
     transition: transform 250ms ease-in-out;
     position: absolute;
+    overflow: auto;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 796px;
+    height: 100vh;
     z-index: 999;
     padding: 48px 40px;
     background: #ffffff;
