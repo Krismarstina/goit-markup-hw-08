@@ -186,6 +186,12 @@ img {
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 768px) {
   .menu-nav {
     display: none;
@@ -211,9 +217,6 @@ img {
   }
 }
 
-.menu-contacts {
-  margin-top: 302px;
-}
 @media screen and (min-width: 768px) {
   .menu-contacts {
     display: none;

@@ -73,76 +73,80 @@
           </li>
         </ul>
       </div>
-      <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-toggle js-close-menu">
-          <svg
-            width="40"
-            height="40"
-            class="menu-toggle__svg"
-            aria-label="переключатель мобильного меню"
-          >
-            <use href="./images/icons.svg#menu-header"></use>
-          </svg>
-        </button>
+      <div class="menu-container js-menu-container wrapper" id="mobile-menu">
+        <div class="wrapper-top">
+          <button class="menu-toggle js-close-menu">
+            <svg
+              width="40"
+              height="40"
+              class="menu-toggle__svg"
+              aria-label="переключатель мобильного меню"
+            >
+              <use href="./images/icons.svg#menu-header"></use>
+            </svg>
+          </button>
 
-        <nav class="menu-nav">
-          <ul class="menu-nav__list">
-            <li class="menu-nav__item">
+          <nav class="menu-nav">
+            <ul class="menu-nav__list">
+              <li class="menu-nav__item">
+                <a
+                  href="./index.html"
+                  class="menu-nav__link menu-nav__link--current"
+                  >Студия</a
+                >
+              </li>
+              <li class="menu-nav__item">
+                <a href="./portfolio.html" class="menu-nav__link">Портфолио</a>
+              </li>
+              <li class="menu-nav__item">
+                <a href="" class="menu-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="wrapper-bottom">
+          <ul class="menu-contacts">
+            <li class="menu-contacts__item menu-contacts__item--bottom">
               <a
-                href="./index.html"
-                class="menu-nav__link menu-nav__link--current"
-                >Студия</a
+                href="tel:+380961111111"
+                class="menu-contacts__link menu-contacts__phone"
+              >
+                +38 096 111 11 11</a
               >
             </li>
-            <li class="menu-nav__item">
-              <a href="./portfolio.html" class="menu-nav__link">Портфолио</a>
-            </li>
-            <li class="menu-nav__item">
-              <a href="" class="menu-nav__link">Контакты</a>
+            <li class="menu-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="menu-contacts__link menu-contacts__mail"
+              >
+                info@devstudio.com</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="menu-contacts">
-          <li class="menu-contacts__item menu-contacts__item--bottom">
-            <a
-              href="tel:+380961111111"
-              class="menu-contacts__link menu-contacts__phone"
-            >
-              +38 096 111 11 11</a
-            >
-          </li>
-          <li class="menu-contacts__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="menu-contacts__link menu-contacts__mail"
-            >
-              info@devstudio.com</a
-            >
-          </li>
-        </ul>
 
-        <ul class="menu-socials">
-          <li class="menu-socials__item">
-            <a href="https://www.instagram.com" class="menu-socials__link">
-              Instagram</a
-            >
-          </li>
-          <li class="menu-socials__item">
-            <a href="https://www.twitter.com" class="menu-socials__link"
-              >Twitter</a
-            >
-          </li>
-          <li class="menu-socials__item">
-            <a href="https://www.facebook.com" class="menu-socials__link"
-              >Facebook</a
-            >
-          </li>
-          <li class="menu-socials__item">
-            <a href="https://www.LinkedIn.com" class="menu-socials__link"
-              >LinkedIn</a
-            >
-          </li>
-        </ul>
+          <ul class="menu-socials">
+            <li class="menu-socials__item">
+              <a href="https://www.instagram.com" class="menu-socials__link">
+                Instagram</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a href="https://www.twitter.com" class="menu-socials__link"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a href="https://www.facebook.com" class="menu-socials__link"
+                >Facebook</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a href="https://www.LinkedIn.com" class="menu-socials__link"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -320,8 +324,6 @@
                 "
                 src="./images/desktop/box1-min.jpg"
                 alt="пишет код"
-                width="370"
-                height="294"
               />
               <div class="work__label">десктопные приложения</div>
             </li>
@@ -332,10 +334,7 @@
                   ./images/desktop/box2@2x-min.jpg 2x
                 "
                 src="./images/desktop/box2-min.jpg"
-                src="./images/box2.jpg"
                 alt="дизайн интерфейса мобильного приложения"
-                width="370"
-                height="294"
               />
               <div class="work__label">мобильные приложения</div>
             </li>
@@ -346,10 +345,7 @@
                   ./images/desktop/box3@2x-min.jpg 2x
                 "
                 src="./images/desktop/box3-min.jpg"
-                src="./images/box3.jpg"
                 alt="подборка цвета для дизайна"
-                width="370"
-                height="294"
               />
               <div class="work__label">дизайнерские решения</div>
             </li>
@@ -366,10 +362,10 @@
               <picture>
                 <source
                   srcset="
-                    ./images/mobile/team1.jpg    1x,
-                    ./images/mobile/team1@2x.jpg 2x
+                    ./images/desktop/team1.jpg    1x,
+                    ./images/desktop/team1@2x.jpg 2x
                   "
-                  media="(max-width:767px)"
+                  media="(min-width:1200px)"
                 />
                 <source
                   srcset="
@@ -380,11 +376,12 @@
                 />
                 <source
                   srcset="
-                    ./images/desktop/team1.jpg    1x,
-                    ./images/desktop/team1@2x.jpg 2x
+                    ./images/mobile/team1.jpg    1x,
+                    ./images/mobile/team1@2x.jpg 2x
                   "
-                  media="(min-width:1200px)"
+                  media="(min-width:320px)"
                 />
+
                 <img
                   src="./images/mobile/team1.jpg"
                   alt="фото Игорь Демьяненко"
@@ -430,10 +427,10 @@
               <picture>
                 <source
                   srcset="
-                    ./images/mobile/team2.jpg    1x,
-                    ./images/mobile/team2@2x.jpg 2x
+                    ./images/desktop/team2.jpg    1x,
+                    ./images/desktop/team2@2x.jpg 2x
                   "
-                  media="(max-width:767px)"
+                  media="(min-width:1200px)"
                 />
                 <source
                   srcset="
@@ -444,11 +441,12 @@
                 />
                 <source
                   srcset="
-                    ./images/desktop/team2.jpg    1x,
-                    ./images/desktop/team2@2x.jpg 2x
+                    ./images/mobile/team2.jpg    1x,
+                    ./images/mobile/team2@2x.jpg 2x
                   "
-                  media="(min-width:1200px)"
+                  media="(min-width:320px)"
                 />
+
                 <img src="./images/mobile/team2.jpg" alt="фото Ольга Репина" />
               </picture>
 
@@ -491,10 +489,10 @@
               <picture>
                 <source
                   srcset="
-                    ./images/mobile/team3.jpg    1x,
-                    ./images/mobile/team3@2x.jpg 2x
+                    ./images/desktop/team3.jpg    1x,
+                    ./images/desktop/team3@2x.jpg 2x
                   "
-                  media="(max-width:767px)"
+                  media="(min-width:1200px)"
                 />
                 <source
                   srcset="
@@ -505,11 +503,12 @@
                 />
                 <source
                   srcset="
-                    ./images/desktop/team3.jpg    1x,
-                    ./images/desktop/team3@2x.jpg 2x
+                    ./images/mobile/team3.jpg    1x,
+                    ./images/mobile/team3@2x.jpg 2x
                   "
-                  media="(min-width:1200px)"
+                  media="(min-width:320px)"
                 />
+
                 <img
                   src="./images/mobile/team3.jpg"
                   alt="фото Николай Тарасов"
@@ -555,10 +554,10 @@
               <picture>
                 <source
                   srcset="
-                    ./images/mobile/team4.jpg    1x,
-                    ./images/mobile/team4@2x.jpg 2x
+                    ./images/desktop/team4.jpg    1x,
+                    ./images/desktop/team4@2x.jpg 2x
                   "
-                  media="(max-width:767px)"
+                  media="(min-width:1200px)"
                 />
                 <source
                   srcset="
@@ -569,11 +568,12 @@
                 />
                 <source
                   srcset="
-                    ./images/desktop/team4.jpg    1x,
-                    ./images/desktop/team4@2x.jpg 2x
+                    ./images/mobile/team4.jpg    1x,
+                    ./images/mobile/team4@2x.jpg 2x
                   "
-                  media="(min-width:1200px)"
+                  media="(min-width:320px)"
                 />
+
                 <img
                   src="./images/mobile/team4.jpg"
                   alt="фото Михаил Ермаков"

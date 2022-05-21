@@ -3,8 +3,6 @@
     display: none;
   }
 
-  margin-top: 302px;
-
   &__phone {
     @include font(34px, 500, 1.18, 0.02em);
     color: $accent-color;
